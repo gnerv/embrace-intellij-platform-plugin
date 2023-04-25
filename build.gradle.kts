@@ -13,6 +13,12 @@ plugins {
     alias(libs.plugins.kover) // Gradle Kover Plugin
 }
 
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(11))
+    }
+}
+
 group = properties("pluginGroup").get()
 version = properties("pluginVersion").get()
 
